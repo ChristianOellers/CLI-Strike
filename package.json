@@ -1,0 +1,11 @@
+{
+  "name": "counterstrike-cli",
+  "description": "Counter-Strike for the lazy",
+  "version": "1.0.0",
+  "main": "src/app.js",
+  "author": "Christian Oellers",
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^7.1.0"
+  }
+}
