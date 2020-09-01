@@ -1,3 +1,5 @@
+![Preview](preview.png)
+
 # CLI-Strike
 
 Counter-Strike for the lazy
@@ -6,12 +8,10 @@ Counter-Strike for the lazy
 - [Installation](#installation)
 - [Play](#play)
 
+
 <br>
 
 ---
-
-![Preview](preview.png)
-
 
 <br><br>
 
