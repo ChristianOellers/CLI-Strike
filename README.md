@@ -18,7 +18,7 @@ Counter-Strike for the lazy
 ## About
 
 Ever felt too lazy to install Steam and too noob-ish to compete?
-Welcome to the emotionally rewarding CLI version for the lazy.
+Welcome to the emotionally rewarding and minimalist CLI version.
 
 Perfectly suited as office game; when deploying stuff takes longer as it should,
 or as valid anger management method when other stuff breaks after your shift ends.
