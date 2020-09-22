@@ -13,6 +13,11 @@ Counter-Strike for the lazy
 
 ---
 
+[![Known Vulnerabilities](https://snyk.io/test/github/ChristianOellers/CLI-Strike/badge.svg?targetFile=package.json)](https://snyk.io/test/github/ChristianOellers/CLI-Strike?targetFile=package.json)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ChristianOellers_CLI-Strike&metric=alert_status)](https://sonarcloud.io/dashboard?id=ChristianOellers_CLI-Strike)
+
+---
+
 <br><br>
 
 ## About
