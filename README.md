@@ -26,6 +26,8 @@ Welcome to the emotionally rewarding and minimalist CLI version.
 Perfectly suited as office game; when deploying stuff takes longer as it should,
 or as valid anger management method when other stuff breaks after your shift ends.
 
+Probably still too much interface. Can't await a Pen & Paper version.
+
 
 ### Features & Gameplay
 
@@ -56,9 +58,6 @@ or as valid anger management method when other stuff breaks after your shift end
 
 ## Todo
 
-- Build multiplayer
+- Build multiplayer (could be as simple as round-based from same instance; else socket-based realtime?)
 - Build highscores
-- Await copyright infringement lawsuit
-
-Still too much interface. Can't await a Pen & Paper version.
-
+- Build menu
