@@ -1,12 +1,10 @@
 ![Preview](preview.png)
 
-# CLI-Strike
-
-Counter-Strike for the lazy
+# Lazy gamers Counter-Strike
 
 - [About](#about)
-- [Installation](#installation)
-- [Play](#play)
+- [How to use](#how-to-use)
+- [Todo](#todo)
 
 
 <br>
@@ -39,14 +37,14 @@ Probably still too much interface. Can't await a Pen & Paper version.
 
 <br><br>
 
-## Installation
+## How to use
 
-1. Install [node.js](http://nodejs.org/)
+### Setup
+
+- [node.js](http://nodejs.org/)
 
 
-<br><br>
-
-## Play
+### Run
 
 1. Open any kind of bash CLI
 2. Navigate to the projects `src` folder
