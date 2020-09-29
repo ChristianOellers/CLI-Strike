@@ -1,4 +1,4 @@
-//@flow
+// @flow
 const questionsSelection = [
   {
     name: 'party',

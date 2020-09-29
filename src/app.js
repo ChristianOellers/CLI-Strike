@@ -1,4 +1,4 @@
-//@flow
+// @flow
 const inquirer = require('inquirer');
 
 const { questionsSelection, questionsGameLoop, questionsGameEndWin, questionsGameEndLose } = require('./config');
