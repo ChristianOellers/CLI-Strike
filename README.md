@@ -57,5 +57,5 @@ Probably still too much interface. Can't await a Pen & Paper version.
 ## Todo
 
 - Build multiplayer (could be as simple as round-based from same instance; else socket-based realtime?)
-- Build highscores
+- Build highscore
 - Build menu
