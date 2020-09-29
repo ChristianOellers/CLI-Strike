@@ -1,11 +1,10 @@
-![Preview](preview.png)
+![Teaser](teaser.png)
 
 # Lazy gamers Counter-Strike
 
 - [About](#about)
 - [How to use](#how-to-use)
 - [Todo](#todo)
-
 
 <br>
 
@@ -26,14 +25,12 @@ or as valid anger management method when other stuff breaks after your shift end
 
 Probably still too much interface. Can't await a Pen & Paper version.
 
-
 ### Features & Gameplay
 
 - Scores
 - Costume selection!
 - Weapon selection!
 - And so much more ...
-
 
 <br><br>
 
@@ -43,14 +40,12 @@ Probably still too much interface. Can't await a Pen & Paper version.
 
 - [node.js](http://nodejs.org/)
 
-
 ### Run
 
 1. Open any kind of bash CLI
 2. Navigate to the projects `src` folder
 3. Run `node app.js`
 4. Play
-
 
 <br><br>
 
