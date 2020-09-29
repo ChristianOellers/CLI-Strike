@@ -1,7 +1,7 @@
+//@flow
 const inquirer = require('inquirer');
 
-const {questionsSelection, questionsGameLoop, questionsGameEndWin, questionsGameEndLose} = require('./config');
-
+const { questionsSelection, questionsGameLoop, questionsGameEndWin, questionsGameEndLose } = require('./config');
 
 (() => {
   let score = 0;
@@ -9,7 +9,7 @@ const {questionsSelection, questionsGameLoop, questionsGameEndWin, questionsGame
   /**
    * Game loop
    */
-  async function run () {
+  async function run() {
     await inquirer.prompt(questionsSelection);
 
     const answersGameLoop = await inquirer.prompt(questionsGameLoop);
@@ -25,18 +25,16 @@ const {questionsSelection, questionsGameLoop, questionsGameEndWin, questionsGame
   /**
    * Decision path: Attacks
    */
-  async function attack () {
-    const isSuccess = (Math.random() >= 0.5);
+  async function attack() {
+    const isSuccess = Math.random() >= 0.5;
     const nextQuestions = isSuccess ? questionsGameEndWin : questionsGameEndLose;
 
-    score += (isSuccess) ? 1 : 0;
+    score += isSuccess ? 1 : 0;
 
     console.log('.... Aiming ... Hoping ... AAAAAND; ');
 
     return await inquirer.prompt(nextQuestions);
   }
 
-
   run();
-
 })();

@@ -1,11 +1,32 @@
 {
   "name": "counterstrike-cli",
   "description": "Counter-Strike for the lazy",
-  "version": "1.0.0",
-  "main": "src/app.js",
   "author": "Christian Oellers",
   "license": "MIT",
+  "version": "1.0.0",
+  "main": "src/app.js",
+  "private": true,
+  "scripts": {
+    "project:clean": "rm -rf node_modules",
+    "project:install": "npm run project:clean && npm install",
+    "project:update": "npm run project:clean && npm update"
+  },
   "dependencies": {
     "inquirer": "^7.3.3"
+  },
+  "devDependencies": {
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-flowtype": "^4.7.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "flow-bin": "^0.119.1",
+    "flow-typed": "^3.2.1",
+    "prettier": "^2.1.2",
+    "prettier-eslint": "^11.0.0"
+  },
+  "eslintConfig": {
+    "extends": "airbnb"
   }
 }
