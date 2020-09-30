@@ -1,4 +1,4 @@
-![Teaser](teaser.png)
+![CLI-Strike](teaser.png)
 
 # Lazy gamers Counter-Strike
 
