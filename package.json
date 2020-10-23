@@ -7,6 +7,7 @@
   "main": "src/app.js",
   "private": true,
   "scripts": {
+    "start": "node src/app.js",
     "project:clean": "rm -rf node_modules",
     "project:install": "npm run project:clean && npm install",
     "project:update": "npm run project:clean && npm update"

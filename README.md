@@ -42,14 +42,13 @@ Probably still too much interface. Can't await a Pen & Paper version.
 ### Run
 
 1. Open any kind of bash CLI
-2. Navigate to the projects `src` folder
-3. Run `node app.js`
-4. Play
+2. Run `npm run start`
+3. Play
 
 <br><br>
 
 ## Todo
 
 - Build multiplayer (could be as simple as round-based from same instance; else socket-based realtime?)
-- Build highscore
+- Build high-score
 - Build menu
