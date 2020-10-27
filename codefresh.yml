@@ -23,15 +23,17 @@ steps:
     type: build
     stage: build
     tag: '${{CF_BRANCH_TAG_NORMALIZED}}'
-    image_name: cli-strike
+    image_name: theremotecoder/cli-strike
     working_directory: ${{clone}}
     dockerfile: Dockerfile
     registry: dockerhub
+    disable_push: true
 
   push:
     title: 'Pushing Docker image'
     type: push
     stage: push
     tag: 'latest'
-    candidate: ${{build}}
+    image_name: theremotecoder/cli-strike
     registry: dockerhub
+    candidate: ${{build}}
