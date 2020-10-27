@@ -5,34 +5,33 @@
 
 version: '1.0'
 stages:
-  - 'clone'
-  - 'build'
-  - 'push'
+  - clone
+  - build
+  - push
 
 steps:
   clone:
     title: 'Cloning repository'
-    type: 'git-clone'
-    stage: 'clone'
+    type: git-clone
+    stage: clone
     repo: 'ChristianOellers/CLI-Strike'
     revision: '${{CF_BRANCH}}'
     git: github
 
   build:
     title: 'Building Docker image'
-    type: 'build'
-    stage: 'build'
-    image_name: 'CLI-Strike'
-    working_directory: '${{clone}}'
+    type: build
+    stage: build
     tag: '${{CF_BRANCH_TAG_NORMALIZED}}'
+    image_name: cli-strike
+    working_directory: ${{clone}}
     dockerfile: Dockerfile
     registry: dockerhub
 
   push:
     title: 'Pushing Docker image'
     type: push
-    stage: 'push'
-    image_name: 'theremotecoder/cli-strike'
+    stage: push
     tag: 'latest'
     candidate: ${{build}}
     registry: dockerhub
