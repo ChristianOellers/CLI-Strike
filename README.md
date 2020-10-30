@@ -10,7 +10,7 @@
 
 ---
 
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ChristianOellers_CLI-Strike&metric=alert_status)](https://sonarcloud.io/dashboard?id=ChristianOellers_CLI-Strike)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ChristianOellers_CLI-Strike&metric=alert_status)](https://sonarcloud.io/dashboard?id=ChristianOellers_CLI-Strike) [![Codefresh build status](https://g.codefresh.io/api/badges/pipeline/christianoellers/GitHub%20-%20Personal%2FCLI-Strike?type=cf-1&key=eyJhbGciOiJIUzI1NiJ9.NWIxOTM3YmEzOTQwNTQwMDAxNDNlODRh.39MYZfoRg0Gw7DGpSxQjVcVHMQlf4ytpB-4KKgZrgjM)](https://g.codefresh.io/pipelines/edit/new/builds?id=5f9278a243d7382aa38e6b00&pipeline=CLI-Strike&projects=GitHub%20-%20Personal&projectId=5f92788137ab5b83a9720e1d)
 
 <br><br>
 
