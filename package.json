@@ -4,7 +4,6 @@
   "author": "Christian Oellers",
   "license": "MIT",
   "version": "1.0.0",
-  "main": "src/app.js",
   "private": true,
   "scripts": {
     "start": "node src/app.js",
