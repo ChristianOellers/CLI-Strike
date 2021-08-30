@@ -1,6 +1,8 @@
 ![CLI-Strike](teaser.png)
 
-# Lazy gamers Counter-Strike
+# CLI-Strike
+
+Lazy gamers Counter-Strike
 
 - [About](#about)
 - [How to use](#how-to-use)
