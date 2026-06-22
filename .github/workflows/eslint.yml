@@ -9,9 +9,6 @@
 
 name: ESLint
 
-env:
-  ENABLE_LINT: false
-
 on:
   push:
     branches: [ "main" ]
