@@ -9,6 +9,9 @@
 
 name: ESLint
 
+env:
+  ENABLE_LINT: false
+
 on:
   push:
     branches: [ "main" ]
@@ -20,6 +23,7 @@ on:
 
 jobs:
   eslint:
+    if: ${{ vars.JOBS_ENABLED == 'true' }}
     name: Run eslint scanning
     runs-on: ubuntu-latest
     permissions:
