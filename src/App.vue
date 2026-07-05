@@ -1,8 +1,12 @@
+<script setup lang="ts">
+import { inject as injectAnalytics } from "@vercel/analytics"
+import { injectSpeedInsights } from "@vercel/speed-insights"
+injectAnalytics()
+injectSpeedInsights()
+</script>
+
 <script setup>
 import { reactive } from "vue"
-import { Analytics } from "@vercel/analytics/vue"
-import { SpeedInsights } from "@vercel/speed-insights/vue"
-
 import ScoreBar from "./components/ScoreBar.vue"
 import PhaseSelection from "./components/PhaseSelection.vue"
 import PhaseGameLoop from "./components/PhaseGameLoop.vue"
@@ -54,8 +58,6 @@ function onNext() {
 </script>
 
 <template>
-  <Analytics />
-  <SpeedInsights />
   <ScoreBar
     :score="state.score"
     :side="state.player.side"
