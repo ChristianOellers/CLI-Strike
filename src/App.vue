@@ -1,16 +1,14 @@
-<script setup lang="ts">
-import { inject as injectAnalytics } from "@vercel/analytics"
-import { injectSpeedInsights } from "@vercel/speed-insights"
-injectAnalytics()
-injectSpeedInsights()
-</script>
-
 <script setup>
 import { reactive } from "vue"
+import { inject as injectAnalytics } from "@vercel/analytics"
+import { injectSpeedInsights } from "@vercel/speed-insights"
 import ScoreBar from "./components/ScoreBar.vue"
 import PhaseSelection from "./components/PhaseSelection.vue"
 import PhaseGameLoop from "./components/PhaseGameLoop.vue"
 import PhaseOutcome from "./components/PhaseOutcome.vue"
+
+injectAnalytics()
+injectSpeedInsights()
 
 const state = reactive({
   phase: "selection",
