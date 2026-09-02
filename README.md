@@ -1,52 +1,36 @@
-![CLI-Strike](teaser.png)
-
 # CLI-Strike
 
-Lazy gamers Counter-Strike
+![CLI-Strike](teaser.png)
 
-- [About](#about)
-- [How to use](#how-to-use)
-- [Todo](#todo)
+Lazy gamers Counter-Strike.
 
-<br>
-
----
+> [!TIP]
+> Proudly vibe coded since 2026. Neither reviewed nor optimized afterwards.
 
 ## About
 
-Ever felt too lazy to install Steam and too noob-ish to compete?
-Welcome to the emotionally rewarding and minimalist CLI version.
+This project acts as a low-cost, low-complexity tech playground.
 
-Perfectly suited as office game; when deploying stuff takes longer as it should,
-or as valid anger management method when other stuff breaks after your shift ends.
+It serves as an all-in-one location to drop in any other tech stack I'd like to explore;
+to reduce the overhead of managing several repositories.
 
-Probably still too much interface. Can't await a Pen & Paper version.
+### History
+
+- 2026: Zero-shot vibe-code port to Vue tech stack, no prompt engineering or context, an arbitrary model.
+  - This was an experiment to see how far it can go without any guidance or context, to potentially apply the approach to other projects with legacy tech stacks.
+- 2023: This project started as some long-forgotten office joke. Intended to test the Node plugin 'inquirer' and enhance the UI of work-internal toolings, the game was built around as a demonstration.
+
+---
+
+## Game
+
+Ever felt too lazy to install Steam or compete online?
+Welcome to the emotionally rewarding and minimalist solo-player version.
 
 ### Features & Gameplay
 
 - Scores
 - Costume selection!
 - Weapon selection!
-- And so much more ...
 
-<br><br>
-
-## How to use
-
-### Setup
-
-- [node.js](http://nodejs.org/)
-
-### Run
-
-1. Open any kind of bash CLI
-2. Run `npm run start`
-3. Play
-
-<br><br>
-
-## Todo
-
-- Build multiplayer (could be as simple as round-based from same instance; else socket-based realtime?)
-- Build high-score
-- Build menu
+_And so much more …_

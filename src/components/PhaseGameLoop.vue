@@ -1,36 +1,39 @@
 <script setup>
-import { ref, computed } from 'vue'
-import ChoiceList from './ChoiceList.vue'
-import { MOVE_OPTIONS, ATTACK_OPTIONS } from '../game-data.js'
+import { ATTACK_OPTIONS, MOVE_OPTIONS } from "../game-data.js";
+import ChoiceList from "./ChoiceList.vue";
+import { computed, ref } from "vue";
 
 defineProps({
   player: { type: Object, required: true },
-})
-const emit = defineEmits(['complete'])
+});
 
-const move      = ref('')
-const jump      = ref('')
-const duck      = ref('')
-const seeEnemy  = ref('')
-const attack    = ref('')
+const emit = defineEmits(["complete"]);
+
+const move = ref("");
+const jump = ref("");
+const duck = ref("");
+const seeEnemy = ref("");
+const attack = ref("");
 
 const canSubmit = computed(() => {
-  if (!move.value || !jump.value) return false
-  if (jump.value === 'No' && !duck.value) return false
-  if (!seeEnemy.value) return false
-  if (seeEnemy.value === 'Yes' && !attack.value) return false
-  return true
-})
+  if (!move.value || !jump.value) return false;
+  if (jump.value === "No" && !duck.value) return false;
+  if (!seeEnemy.value) return false;
+  if (seeEnemy.value === "Yes" && !attack.value) return false;
+
+  return true;
+});
 
 function submit() {
-  if (!canSubmit.value) return
-  emit('complete', {
-    move:      move.value,
-    jump:      jump.value === 'Yes',
-    duck:      duck.value === 'Yes',
-    seeEnemy:  seeEnemy.value,
-    attack:    seeEnemy.value === 'Yes' ? attack.value : '',
-  })
+  if (!canSubmit.value) return;
+
+  emit("complete", {
+    move: move.value,
+    jump: jump.value === "Yes",
+    duck: duck.value === "Yes",
+    seeEnemy: seeEnemy.value,
+    attack: seeEnemy.value === "Yes" ? attack.value : "",
+  });
 }
 </script>
 
@@ -44,8 +47,6 @@ function submit() {
     <ChoiceList label="Do you see an enemy?" :options="['Yes', 'No']" v-model="seeEnemy" />
     <ChoiceList v-if="seeEnemy === 'Yes'" label="Attack?" :options="ATTACK_OPTIONS" v-model="attack" />
 
-    <button class="btn btn--primary" :disabled="!canSubmit" @click="submit">
-      Go →
-    </button>
+    <button class="btn btn--primary" :disabled="!canSubmit" @click="submit">Go →</button>
   </div>
 </template>

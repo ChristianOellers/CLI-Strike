@@ -2,9 +2,10 @@
 defineProps({
   label: { type: String, required: true },
   options: { type: Array, required: true },
-  modelValue: { type: String, default: '' },
-})
-defineEmits(['update:modelValue'])
+  modelValue: { type: String, default: "" },
+});
+
+defineEmits(["update:modelValue"]);
 </script>
 
 <template>
@@ -17,7 +18,9 @@ defineEmits(['update:modelValue'])
           class="choice-list__option"
           :class="{ 'choice-list__option--selected': modelValue === option }"
           @click="$emit('update:modelValue', option)"
-        >{{ option }}</button>
+        >
+          {{ option }}
+        </button>
       </li>
     </ul>
   </div>

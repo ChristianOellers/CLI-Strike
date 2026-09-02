@@ -1,28 +1,28 @@
 <script setup>
-import { ref, computed, watch } from 'vue'
-import ChoiceList from './ChoiceList.vue'
-import CheckboxGroup from './CheckboxGroup.vue'
-import { SIDES, COSTUMES, WEAPONS } from '../game-data.js'
+import { COSTUMES, SIDES, WEAPONS } from "../game-data.js";
+import CheckboxGroup from "./CheckboxGroup.vue";
+import ChoiceList from "./ChoiceList.vue";
+import { computed, ref, watch } from "vue";
 
-const emit = defineEmits(['complete'])
+const emit = defineEmits(["complete"]);
 
-const side    = ref('')
-const costume = ref('')
-const weapons = ref([])
+const side = ref("");
+const costume = ref("");
+const weapons = ref([]);
 
-const costumeOptions = computed(() => side.value ? COSTUMES[side.value] : [])
-const weaponOptions  = computed(() => side.value ? WEAPONS[side.value] : [])
+const costumeOptions = computed(() => (side.value ? COSTUMES[side.value] : []));
+const weaponOptions = computed(() => (side.value ? WEAPONS[side.value] : []));
 
 watch(side, (val) => {
-  costume.value = ''
-  weapons.value = val ? WEAPONS[val].filter(w => w.checked).map(w => w.name) : []
-})
+  costume.value = "";
+  weapons.value = val ? WEAPONS[val].filter((w) => w.checked).map((w) => w.name) : [];
+});
 
-const canSubmit = computed(() => side.value && costume.value)
+const canSubmit = computed(() => side.value && costume.value);
 
 function submit() {
-  if (!canSubmit.value) return
-  emit('complete', { side: side.value, costume: costume.value, weapons: weapons.value })
+  if (!canSubmit.value) return;
+  emit("complete", { side: side.value, costume: costume.value, weapons: weapons.value });
 }
 </script>
 
@@ -37,12 +37,7 @@ function submit() {
         <p class="costume-section__label">Costume?</p>
         <ul class="costume-section__options">
           <li v-for="hex in costumeOptions" :key="hex">
-            <button
-              type="button"
-              class="costume-option"
-              :class="{ 'costume-option--selected': costume === hex }"
-              @click="costume = hex"
-            >
+            <button type="button" class="costume-option" :class="{ 'costume-option--selected': costume === hex }" @click="costume = hex">
               <span class="costume-option__swatch" :style="{ background: hex }" />
               <span class="costume-option__label">{{ hex }}</span>
             </button>
@@ -53,9 +48,7 @@ function submit() {
       <CheckboxGroup label="Weapons?" :options="weaponOptions" v-model="weapons" />
     </template>
 
-    <button class="btn btn--primary" :disabled="!canSubmit" @click="submit">
-      Deploy →
-    </button>
+    <button class="btn btn--primary" :disabled="!canSubmit" @click="submit">Deploy →</button>
   </div>
 </template>
 

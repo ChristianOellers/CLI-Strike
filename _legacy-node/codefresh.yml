@@ -1,9 +1,8 @@
-# Examples: https://codefresh.io/docs/docs/yaml-examples/examples
-#
 # CF_BRANCH value is auto set when pipeline is triggered
-# - Learn more at codefresh.io/docs/docs/codefresh-yaml/variables
+# - https://codefresh.io/docs/docs/yaml-examples/examples
+# - https://codefresh.io/docs/docs/codefresh-yaml/variables
 
-version: '1.0'
+version: "1.0"
 stages:
   - clone
   - build
@@ -11,18 +10,18 @@ stages:
 
 steps:
   clone:
-    title: 'Cloning repository'
+    title: "Cloning repository"
     type: git-clone
     stage: clone
-    repo: 'ChristianOellers/CLI-Strike'
-    revision: '${{CF_BRANCH}}'
+    repo: "ChristianOellers/CLI-Strike"
+    revision: "${{CF_BRANCH}}"
     git: github
 
   build:
-    title: 'Building Docker image'
+    title: "Building Docker image"
     type: build
     stage: build
-    tag: '${{CF_BRANCH_TAG_NORMALIZED}}'
+    tag: "${{CF_BRANCH_TAG_NORMALIZED}}"
     image_name: theremotecoder/cli-strike
     working_directory: ${{clone}}
     dockerfile: Dockerfile
@@ -30,10 +29,10 @@ steps:
     disable_push: true
 
   push:
-    title: 'Pushing Docker image'
+    title: "Pushing Docker image"
     type: push
     stage: push
-    tag: 'latest'
+    tag: "latest"
     image_name: theremotecoder/cli-strike
     registry: dockerhub
     candidate: ${{build}}

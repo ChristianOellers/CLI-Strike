@@ -1,0 +1,22 @@
+// Format: https://aka.ms/devcontainer.json
+// Config: https://github.com/devcontainers/templates/tree/main/src/typescript-node
+// Further: https://containers.dev/guide/dockerfile | https://containers.dev/features | https://aka.ms/dev-containers-non-root
+{
+  "name": "Node.js & TypeScript",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "postCreateCommand": "bun install",
+  "features": {
+    "ghcr.io/devcontainers-extra/features/prettier:1": {},
+    "ghcr.io/shyim/devcontainers-features/bun:0": {}
+  },
+  "forwardPorts": [5173],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Vue.volar"
+      ]
+    }
+  }
+}

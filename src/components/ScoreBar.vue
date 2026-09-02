@@ -1,9 +1,9 @@
 <script setup>
 defineProps({
-  score:   { type: Number, default: 0 },
-  side:    { type: String, default: '' },
-  weapons: { type: Array,  default: () => [] },
-})
+  score: { type: Number, default: 0 },
+  side: { type: String, default: "" },
+  weapons: { type: Array, default: () => [] },
+});
 </script>
 
 <template>
@@ -13,7 +13,7 @@ defineProps({
 
       <div class="score-bar__meta" v-if="side">
         <span class="score-bar__side">{{ side }}</span>
-        <span v-if="weapons.length" class="score-bar__weapons">{{ weapons.join(' · ') }}</span>
+        <span v-if="weapons.length" class="score-bar__weapons">{{ weapons.join(" · ") }}</span>
       </div>
 
       <div class="score-bar__score">

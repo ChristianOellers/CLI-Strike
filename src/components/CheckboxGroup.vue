@@ -3,21 +3,26 @@ const props = defineProps({
   label: { type: String, required: true },
   options: { type: Array, required: true }, // [{ name: string, checked: boolean }]
   modelValue: { type: Array, default: () => [] },
-})
-const emit = defineEmits(['update:modelValue'])
+});
+
+const emit = defineEmits(["update:modelValue"]);
 
 function toggle(name) {
-  const next = [...props.modelValue]
-  const idx = next.indexOf(name)
-  if (idx === -1) next.push(name)
-  else next.splice(idx, 1)
-  emit('update:modelValue', next)
+  const next = [...props.modelValue];
+  const id = next.indexOf(name);
+
+  if (id === -1) next.push(name);
+  else next.splice(id, 1);
+
+  emit("update:modelValue", next);
 }
 </script>
 
 <template>
   <div class="checkbox-group">
-    <p class="checkbox-group__label">{{ label }}</p>
+    <p class="checkbox-group__label">
+      {{ label }}
+    </p>
     <ul class="checkbox-group__options">
       <li v-for="option in options" :key="option.name">
         <button
@@ -26,7 +31,7 @@ function toggle(name) {
           :class="{ 'checkbox-group__option--checked': modelValue.includes(option.name) }"
           @click="toggle(option.name)"
         >
-          <span class="checkbox-group__mark">{{ modelValue.includes(option.name) ? '✓' : '' }}</span>
+          <span class="checkbox-group__mark">{{ modelValue.includes(option.name) ? "✓" : "" }}</span>
           {{ option.name }}
         </button>
       </li>

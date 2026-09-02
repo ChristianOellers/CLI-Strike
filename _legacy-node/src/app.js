@@ -1,7 +1,7 @@
 // @flow
-const inquirer = require('inquirer');
+const inquirer = require("inquirer");
 
-const { questionsSelection, questionsGameLoop, questionsGameEndWin, questionsGameEndLose } = require('./config');
+const { questionsSelection, questionsGameLoop, questionsGameEndWin, questionsGameEndLose } = require("./config");
 
 (() => {
   let score = 0;
@@ -19,6 +19,7 @@ const { questionsSelection, questionsGameLoop, questionsGameEndWin, questionsGam
     }
 
     console.log(`Score: ${score} /// RESTARTING`);
+
     run();
   }
 
@@ -31,7 +32,7 @@ const { questionsSelection, questionsGameLoop, questionsGameEndWin, questionsGam
 
     score += isSuccess ? 1 : 0;
 
-    console.log('.... Aiming ... Hoping ... AAAAAND; ');
+    console.log(".... Aiming ... Hoping ... AAAAAND; ");
 
     return await inquirer.prompt(nextQuestions);
   }
