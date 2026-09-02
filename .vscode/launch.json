@@ -1,0 +1,10 @@
+{
+  "configurations": [
+    {
+      "name": "Containers: Node.js Launch",
+      "type": "node",
+      "request": "launch",
+      "preLaunchTask": "docker-run: debug"
+    }
+  ]
+}
