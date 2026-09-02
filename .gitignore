@@ -20,3 +20,7 @@ npm-debug.log
 *desktop.ini
 .DS_Store
 Thumbs.db
+
+# Env
+.vercel
+.env*
