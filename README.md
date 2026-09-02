@@ -1,6 +1,6 @@
 # CLI-Strike
 
-![CLI-Strike](teaser.png)
+[![CLI-Strike](teaser.png)](https://vercel.com/codeconutltd/project--cli-strike)
 
 Lazy gamers Counter-Strike.
 
